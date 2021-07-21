@@ -8,19 +8,24 @@ class registration_class:
         global driver
         driver = obj
 
-    def enter_username(self, username):
+    @staticmethod
+    def enter_username(username):
         driver.find_element_by_xpath(Elements.elements.username).send_keys(username)
 
-    def enter_email(self, email):
+    @staticmethod
+    def enter_email(email):
         driver.find_element_by_xpath(Elements.elements.mail).send_keys(email)
 
-    def enter_password(self, password):
+    @staticmethod
+    def enter_password(password):
         driver.find_element_by_xpath(Elements.elements.password).send_keys(password)
 
-    def repeat_enter_password(self, password):
+    @staticmethod
+    def repeat_enter_password(password):
         driver.find_element_by_css_selector(Elements.elements.phone_number).send_keys(password)
 
-    def enter_address(self, address):
+    @staticmethod
+    def enter_address(address):
         driver.find_element_by_css_selector(Elements.elements.address).send_keys(address)
 
 #     driver.find_element_by_xpath(ConfigReader.fetch_element_locators('Registration', 'username')).send_keys(
